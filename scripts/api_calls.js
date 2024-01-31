@@ -1,14 +1,7 @@
-/*
 var getResourceCategoriesEndPoint = "http://127.0.0.1:5000/getResourceCategories";
 var getResourceCategoryOptionsEndPoint = "http://127.0.0.1:5000/getResourceCategoryOptions";
 var getResourceInformationEndPoint = "http://127.0.0.1:5000/getResourceInformation";
-*/
 var ERROR_FLAG = "ERROR";
-
-var getResourceCategoriesEndPoint = "https://byteanalytica.com/getResourceCategories";
-var getResourceCategoryOptionsEndPoint = "https://byteanalytica.com/getResourceCategoryOptions";
-var getResourceInformationEndPoint = "https://byteanalytica.com/getResourceInformation";
-
 
 function endpointCall(endpoint=null, params={}, callBack=null)
 {
