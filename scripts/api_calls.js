@@ -7,7 +7,7 @@ var ERROR_FLAG = "ERROR";
 
 var getResourceCategoriesEndPoint = "https://api-hwh.com/getResourceCategories";
 var getResourceCategoryOptionsEndPoint = "https://api-hwh.com/getResourceCategoryOptions";
-var getResourceInformationEndPoint = "https://api-hwh.com /getResourceInformation";
+var getResourceInformationEndPoint = "https://api-hwh.com/getResourceInformation";
 
 
 function endpointCall(endpoint=null, params={}, callBack=null)
