@@ -77,7 +77,7 @@ function getTranslatingLoadingText()
     switch(localStorage.getItem('RLS_LANG'))
     {
         case "english":
-            return "Translating";
+            return "";
         case "spanish":
             return "Traduciendo";
         case "vietnamese":
@@ -87,6 +87,6 @@ function getTranslatingLoadingText()
         case "chinese (traditional)":
             return "翻译";
         default:
-            return "Translating";
+            return "";
     }
 }
