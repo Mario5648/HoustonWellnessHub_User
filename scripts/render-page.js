@@ -150,17 +150,17 @@ function getResourceButtonText()
     switch(localStorage.getItem('RLS_LANG'))
     {
         case "english":
-            return "Click Here to Sign-Up";
+            return "View Official Resource";
         case "spanish":
-            return "Haz clic aquí para registrarte";
+            return "Ver Recurso Oficial";
         case "vietnamese":
-            return "Nhấn vào đây để đăng ký";
+            return "Xem Nguồn Tài Nguyên Chính Thức";
         case "hindi":
-            return "यहाँ क्लिक करें और साइन अप करें";
+            return "आधिकारिक संसाधन देखें";
         case "chinese (traditional)":
-            return "点击这里注册";
+            return "查看官方资源";
         default:
-            return "Click Here to Sign-Up";
+            return "View Official Resource";
         
     }
 }

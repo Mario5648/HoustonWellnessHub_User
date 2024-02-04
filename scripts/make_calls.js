@@ -87,6 +87,6 @@ function getTranslatingLoadingText()
         case "chinese (traditional)":
             return "翻译";
         default:
-            return "Click Here to Sign-Up";
+            return "Translating";
     }
 }
