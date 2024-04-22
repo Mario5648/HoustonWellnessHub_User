@@ -118,6 +118,20 @@ function renderResourceInfoPage(selectedResource)
         /* Render the page that shows all the resources based on the selected category */
         let videoContainerHtml = ``;
 
+        //If all fields are empty besides the go to link then directly go to the resource rather than going to the info page
+        if(!stepsDict['steps'] && !linksDict['video'] && !resourceInformationPageTextDict['description'])
+        {
+            if(linksDict['button'])
+            {
+                openPage();
+                return;
+            }else
+            {
+                alert('Resource is currently empty.');
+                return;
+            }
+        }
+
         //If there is no video provided, do not display video section 
         if(linksDict['video'])
         {
