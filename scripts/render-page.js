@@ -34,6 +34,7 @@ function displayOptionButtons(openFunction)
     document.getElementById("options-section").innerHTML = buttonsHtml;
 }
 
+
 function renderHomescreen()
 {
     resourcePage = 1;
@@ -42,15 +43,17 @@ function renderHomescreen()
         /* Render the home page button with all resource categories as options */
         let homeScreenHtml = `
                                 <div class="menu-section">
-                                    <p>Language</p>
-                                    <select id="selectedLanguage" onchange="languageSelectTranslate()">
-                                        <option value="english" ${localStorage.getItem('RLS_LANG') == "english" ? "SELECTED": ""}>English 🇺🇸</option>
-                                        <option value="spanish" ${localStorage.getItem('RLS_LANG') == "spanish" ? "SELECTED": ""}>Español 🇲🇽</option>
-                                        <option value="vietnamese" ${localStorage.getItem('RLS_LANG') == "vietnamese" ? "SELECTED": ""}>tiếng Việt 🇻🇳</option>
-                                        <option value="hindi" ${localStorage.getItem('RLS_LANG') == "hindi" ? "SELECTED": ""}>हिन्दी 🇮🇳</option>
-                                        <option value="chinese (traditional)" ${localStorage.getItem('RLS_LANG') == "chinese (traditional)" ? "SELECTED": ""}>官话 🇨🇳</option>
+                                    <div class="language-section-container">
+                                        <p>Language</p>
+                                        <select id="selectedLanguage" onchange="languageSelectTranslate()">
+                                            <option value="english" ${localStorage.getItem('RLS_LANG') == "english" ? "SELECTED": ""}>English 🇺🇸</option>
+                                            <option value="spanish" ${localStorage.getItem('RLS_LANG') == "spanish" ? "SELECTED": ""}>Español 🇲🇽</option>
+                                            <option value="vietnamese" ${localStorage.getItem('RLS_LANG') == "vietnamese" ? "SELECTED": ""}>tiếng Việt 🇻🇳</option>
+                                            <option value="hindi" ${localStorage.getItem('RLS_LANG') == "hindi" ? "SELECTED": ""}>हिन्दी 🇮🇳</option>
+                                            <option value="chinese (traditional)" ${localStorage.getItem('RLS_LANG') == "chinese (traditional)" ? "SELECTED": ""}>官话 🇨🇳</option>
 
-                                    </select>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="description-section">
                                     <p class="header-text">${resourceCategoriesPageTextDict['title']}</p>
@@ -111,6 +114,19 @@ function renderResourceInfoPage(selectedResource)
 
     getResourceInformationCall(function(){
         /* Render the page that shows all the resources based on the selected category */
+        let videoContainerHtml = ``;
+
+        //If there is no video provided, do not display video section 
+        if(linksDict['video'])
+        {
+            videoContainerHtml = `
+                <br><br> 
+                <div class="video-section">
+                    <p>Video :</p><br>
+                    <iframe height="150" src=${linksDict['video']} frameborder="0" allowfullscreen></iframe>
+                </div>
+            `;
+        }
 
         let renderResourceInfoPageHtml = `
                                             <div class="menu-section">
@@ -130,11 +146,7 @@ function renderResourceInfoPage(selectedResource)
                                                     <p>Steps :</p><br>
                                                     <p>${stepsDict['steps'].replace(/(\r\n|\r|\n)/g, '<br>')}</p>
                                                 </div>
-                                                <br><br> 
-                                                <div class="video-section">
-                                                    <p>Video :</p><br>
-                                                    <iframe height="150" src=${linksDict['video']} frameborder="0" allowfullscreen></iframe>
-                                                </div>
+                                                ${videoContainerHtml}
                                             </div>
 
                                         `;
