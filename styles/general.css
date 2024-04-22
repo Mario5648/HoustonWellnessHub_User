@@ -138,7 +138,7 @@ body
 {
     width: 100%;
 }
-@media only screen and (min-width: 601px) {    
+@media only screen and (min-width: 801px) {    
     body
     {
         font-family: 'Poppins', sans-serif;
@@ -159,7 +159,7 @@ body
         background-color: #042c64;
         color: #fff;
         background-image: url("../items-bg.png");
-        background-repeat: no-repeat;
+        background-repeat: repeat;
         background-size: 300% auto;
 
     }
