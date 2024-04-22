@@ -51,7 +51,7 @@ body
 
     text-align: center;
 
-    background-color: #3d3b3c;
+    background-color: #042c64;
     color: white;
 
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
@@ -103,7 +103,7 @@ body
 .go-to-resource
 {
     border-style: none;
-    background-color: #3d3b3c;
+    background-color: #eb6e1c;
     color: white;
     border-radius: 10px;
     width: 75%;
