@@ -160,7 +160,7 @@ body
         color: #fff;
         background-image: url("../items-bg.png");
         background-repeat: no-repeat;
-        background-attachment:fixed;
+        background-attachment:scroll;
         background-size: 400% auto;
     }
 }
