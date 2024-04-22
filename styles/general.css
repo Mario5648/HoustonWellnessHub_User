@@ -159,6 +159,6 @@ body
         background-color: #042c64;
         color: #fff;
         background-image: url("../items-bg.png");
-        background-size: 600% auto;
+        background-size: cover;
     }
 }
