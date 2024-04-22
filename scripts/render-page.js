@@ -28,6 +28,8 @@ function displayOptionButtons(openFunction)
 
     for(let buttonIndex = 0; buttonIndex < numOfButtons; buttonIndex+=1)
     {
+        buttonOptions[buttonIndex] = buttonOptions[buttonIndex].replace('`', "'")
+
         buttonsHtml += `<br><br><div class="option-button" onclick="${openFunction}('${buttonOptionsEngName[buttonIndex]}')"><p class="normal-text">${buttonOptions[buttonIndex]}</p></div>`;
     }
 
