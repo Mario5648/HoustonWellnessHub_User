@@ -8,8 +8,8 @@ body
     background-attachment: fixed;
     background-size:contain;
     background-position: center;
+    background-attachment: scroll;
 }
-
 .content-section
 {
     display: flex;
