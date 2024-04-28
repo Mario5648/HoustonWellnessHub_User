@@ -44,6 +44,7 @@ function renderHomescreen()
 
         /* Render the home page button with all resource categories as options */
         let homeScreenHtml = `
+                                <div class="backgroundImageMobile"></div>
                                 <div class="menu-section">
                                     <div class="language-section-container">
                                         <p>Language</p>
