@@ -1,15 +1,3 @@
-body
-{
-    font-family: 'Poppins', sans-serif;
-    background-color: #042c64;
-    color: #fff;
-    background-image: url("../items-bg.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size:contain;
-    background-position: center;
-    background-attachment: scroll;
-}
 .content-section
 {
     display: flex;
@@ -137,4 +125,31 @@ body
 .video-section
 {
     width: 100%;
+}
+@media only screen and (min-width: 601px) {    
+    body
+    {
+        font-family: 'Poppins', sans-serif;
+        background-color: #042c64;
+        color: #fff;
+        background-image: url("../items-bg.png");
+        background-repeat: no-repeat;
+        background-size:contain;
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
+@media only screen and (max-width: 600px) {    
+    body
+    {
+        font-family: 'Poppins', sans-serif;
+        background-color: green;
+        color: #fff;
+        background-image: url("../items-bg.png");
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-attachment: fixed;
+
+    }
 }
